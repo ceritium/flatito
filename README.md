@@ -2,6 +2,10 @@
 
 A kind of grep for YAML and JSON files. It allows you to search for a key and get the value and the line number where it is located.
 
+## Meaning
+
+[Esperanto](https://en.wiktionary.org/wiki/flatito): singular past nominal passive participle of flati
+
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:
