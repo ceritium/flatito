@@ -1,0 +1,67 @@
+AllCops:
+  TargetRubyVersion: 3.0
+  NewCops: enable
+
+
+require:
+  - rubocop-performance
+  - rubocop-minitest
+  - rubocop-rake
+
+Metrics/ParameterLists:
+  Enabled: true
+  Exclude:
+    - 'lib/flatito/yaml_with_line_number.rb'
+Metrics/PerceivedComplexity:
+  Enabled: false
+  Exclude:
+    - 'lib/flatito/yaml_with_line_number.rb'
+Naming/MethodParameterName:
+  Enabled: true
+  Exclude:
+    - 'lib/flatito/yaml_with_line_number.rb'
+Layout/DotPosition:
+  EnforcedStyle: trailing
+Layout/LineLength:
+  Enabled: false
+Lint/MissingSuper:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Metrics/ClassLength:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Minitest/MultipleAssertions:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/CommentAnnotation:
+  Enabled: false
+Style/ConditionalAssignment:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/GuardClause:
+  Enabled: false
+Style/HashSyntax:
+  Enabled: false
+Style/IfUnlessModifier:
+  Enabled: false
+Style/MultilineBlockChain:
+  Enabled: false
+Style/OrAssignment:
+  Enabled: false
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Style/StringLiteralsInInterpolation:
+  Enabled: true
+  EnforcedStyle: double_quotes
+Style/SymbolArray:
+  Enabled: false
+Style/WordArray:
+  Enabled: false

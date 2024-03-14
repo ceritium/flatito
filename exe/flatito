@@ -1,0 +1,50 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "flatito"
+require "optparse"
+
+# If no arguments are given, print help
+ARGV << "-h" if ARGV.empty?
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = <<~HEREDOC
+    Usage:    flatito PATH [options]
+    Example:  flatito . -k hello
+
+  HEREDOC
+
+  opts.on("-h", "--help", "Prints this help") do
+    puts opts
+    exit
+  end
+
+  opts.on("-V", "--version", "Show version") do
+    puts "Flatito version #{Flatito::VERSION}"
+    exit
+  end
+
+  opts.on("-kSEARCH", "--search-key=SEARCH", "Search string") do |s|
+    options[:search] = s
+  end
+
+  opts.on("--no-color", "Disable color output") do
+    options[:no_color] = true
+  end
+
+  opts.on("-eEXTENSIONS", "--extensions=EXTENSIONS", "File extensions to search, separated by comma, default: (json,yaml,yaml)") do |e|
+    options[:extensions] = e.split(",").map(&:strip)
+  end
+
+  opts.on("--no-skipping", "Do not skip hidden files") do
+    options[:skip_hidden] = false
+  end
+end.parse!
+
+begin
+  Flatito.search(ARGV, options)
+rescue Interrupt
+  warn "\nInterrupted"
+end

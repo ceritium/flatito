@@ -1,0 +1,5 @@
+default: &default
+  adapter: postgresql
+development:
+  database: keepthissite_development
+  <<: *default

@@ -1,0 +1,12 @@
+en:
+  long_message: |
+    This message
+    is split over
+    multiple lines
+
+  a_sequence:
+    - Currently
+    - we
+    - don't
+    - handle
+    - sequences

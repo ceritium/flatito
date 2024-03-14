@@ -1,0 +1,8 @@
+one: One
+two: !ruby/object:OpenStruct
+  table:
+    one: One
+    two: Two
+three: !ruby/object:UnknowClass
+  one: One
+  two: Two
