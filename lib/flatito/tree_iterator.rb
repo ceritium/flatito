@@ -6,9 +6,9 @@ module Flatito
 
     attr_reader :base_path, :skip_hidden
 
-    def initialize(base_path, skip_hidden: true)
+    def initialize(base_path, options = {})
       @base_path = base_path
-      @skip_hidden = skip_hidden
+      @skip_hidden = options[:skip_hidden] || true
     end
 
     def each(&block)

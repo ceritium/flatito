@@ -7,6 +7,8 @@ require_relative "flatito/tree_iterator"
 require_relative "flatito/flatten_yaml"
 require_relative "flatito/finder"
 require_relative "flatito/yaml_with_line_number"
+require_relative "flatito/renderer"
+require_relative "flatito/regex_from_search"
 
 module Flatito
   def self.search(paths, options)

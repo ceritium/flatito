@@ -7,11 +7,7 @@ module Flatito
       @pathname = pathname
     end
 
-    def entries
-      flatten
-    end
-
-    def flatten
+    def items 
       with_line_numbers.compact.flat_map do |line|
         flatten_hash(line) if line.is_a?(Hash)
       end.compact
