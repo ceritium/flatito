@@ -47,7 +47,7 @@ module Flatito
     end
 
     def print_item(item, line_number_padding)
-      line_number = colorize("#{item.line.to_s.rjust(line_number_padding)}: ", :light_yellow)
+      line_number = colorize("#{item.line.to_s.rjust(line_number_padding)}: ", :yellow)
       value = if item.value.length.positive?
                 colorize("=> #{item.value}", :gray)
               else
