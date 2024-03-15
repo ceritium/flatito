@@ -5,7 +5,7 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in flatito.gemspec
 gemspec
 
-gem "minitest", "~> 5.16"
+gem "minitest", "~> 5.22"
 gem "rake", "~> 13.0"
 gem "rubocop", "~> 1.62"
 gem "rubocop-minitest", "~> 0.11"
