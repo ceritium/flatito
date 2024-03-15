@@ -54,7 +54,7 @@ module Flatito
                 ""
               end
 
-      puts "#{line_number} #{matched_string(item.key)} #{value}\n"
+      puts "#{line_number} #{matched_string(item.key)} #{value}"
     end
 
     private
@@ -100,6 +100,11 @@ module Flatito
   end
 
   class Renderer::TTY < Base
+    CSI = "\e["
+    CLEAR_LINE = "#{CSI}K\e[0G".freeze
+    HIDE_CURSOR = "#{CSI}?25l".freeze
+    SHOW_CURSOR = "#{CSI}?25h".freeze
+
     def initialize(options)
       super
       require "io/console"
@@ -107,27 +112,38 @@ module Flatito
 
     def prepare
       listen_for_stdout_width_change
+      hide_cursor
     end
 
     def print_file_progress(pathname)
-      print "\r #{truncate(pathname.to_s, stdout_width - 4)}#{erase_line}"
+      print truncate(pathname.to_s, stdout_width - 4)
+      clear_line
     end
 
     def print_pathname(pathname)
-      print erase_line
+      clear_line
       super
     end
 
     def ending
-      print erase_line
+      clear_line
+      show_cursor
       puts
     end
 
-    private
-
-    def erase_line
-      "\e[K\e[0G"
+    def hide_cursor
+      print HIDE_CURSOR
     end
+
+    def show_cursor
+      print SHOW_CURSOR
+    end
+
+    def clear_line
+      print CLEAR_LINE
+    end
+
+    private
 
     def stdout_width
       @stdout_width ||= stdout.winsize[1]

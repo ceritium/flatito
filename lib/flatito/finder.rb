@@ -30,7 +30,7 @@ module Flatito
           end
         end
       end
-
+    ensure
       renderer.ending
     end
 
