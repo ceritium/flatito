@@ -56,9 +56,9 @@ module Flatito
     end
 
     class VisitorsToRuby < Psych::Visitors::ToRuby
-      def self.create(symbolize_names: false, freeze: false, strict_integer: false)
+      def self.create(symbolize_names: false, freeze: false)
         class_loader = ClassLoader.new
-        scanner      = Psych::ScalarScanner.new(class_loader, strict_integer: strict_integer)
+        scanner      = Psych::ScalarScanner.new(class_loader)
         new(scanner, class_loader, symbolize_names: symbolize_names, freeze: freeze)
       end
 
