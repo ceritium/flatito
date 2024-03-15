@@ -2,9 +2,11 @@
 
 A kind of grep for YAML and JSON files. It allows you to search for a key and get the value and the line number where it is located.
 
+![Example](docs/screenshot.png)
+
 ## Meaning
 
-[Esperanto](https://en.wiktionary.org/wiki/flatito): singular past nominal passive participle of flati
+[Esperanto](https://en.wiktionary.org/wiki/flatito): singular past nominal passive participle of flati.
 
 ## Installation
 
@@ -29,10 +31,6 @@ Example:  flatito . -k hello
     -e, --extensions=EXTENSIONS      File extensions to search, separated by comma, default: (json,yaml,yaml)
         --no-skipping                Do not skip hidden files
 ```
-
-Example:
-
-![Example](docs/screenshot.png)
 
 ## Development
 
