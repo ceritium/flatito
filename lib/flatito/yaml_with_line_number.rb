@@ -30,8 +30,6 @@ module Flatito
 
     class ClassLoader < Psych::ClassLoader
       def find(klassname)
-        @cache[klassname] ||= resolve(klassname)
-      rescue ArgumentError
         Whatever.new(klassname)
       end
     end

@@ -4,7 +4,7 @@ require "test_helper"
 
 class Flatito::FlattenYamlTest < Minitest::Test
   test "a json" do
-    items = Flatito::FlattenYaml.new("test/fixtures/a.json").items
+    items = Flatito::FlattenYaml.items_from_path("test/fixtures/a.json")
 
     assert_equal 5, items.size
     assert_equal "one", items[0].key
@@ -13,7 +13,7 @@ class Flatito::FlattenYamlTest < Minitest::Test
   end
 
   test "no nested" do
-    items = Flatito::FlattenYaml.new("test/fixtures/no_nested.yml").items
+    items = Flatito::FlattenYaml.items_from_path("test/fixtures/no_nested.yml")
 
     assert_equal 3, items.size
     assert_equal "one", items[0].key
@@ -22,7 +22,7 @@ class Flatito::FlattenYamlTest < Minitest::Test
   end
 
   test "nested" do
-    items = Flatito::FlattenYaml.new("test/fixtures/nested.yml").items
+    items = Flatito::FlattenYaml.items_from_path("test/fixtures/nested.yml")
 
     assert_equal 3, items.size
     assert_equal "nested1.one", items[0].key
@@ -39,7 +39,7 @@ class Flatito::FlattenYamlTest < Minitest::Test
   end
 
   test "with merging hashes" do
-    items = Flatito::FlattenYaml.new("test/fixtures/merge.yml").items
+    items = Flatito::FlattenYaml.items_from_path("test/fixtures/merge.yml")
 
     assert_equal 3, items.size
 
@@ -57,7 +57,7 @@ class Flatito::FlattenYamlTest < Minitest::Test
   end
 
   test "multiline values" do
-    items = Flatito::FlattenYaml.new("test/fixtures/multiline.yml").items
+    items = Flatito::FlattenYaml.items_from_path("test/fixtures/multiline.yml")
 
     assert_equal "en.long_message", items[0].key
     assert_equal 2, items[0].line
@@ -67,12 +67,26 @@ class Flatito::FlattenYamlTest < Minitest::Test
   end
 
   test "with ruby objects" do
-    items = Flatito::FlattenYaml.new("test/fixtures/with_ruby_objects.yml").items
+    items = Flatito::FlattenYaml.items_from_path("test/fixtures/with_ruby_objects.yml")
 
     assert_equal 3, items.size
 
     assert_equal "two", items[1].key
     assert_equal "[object: OpenStruct]", items[1].value
     assert_equal 2, items[1].line
+
+    assert_equal "three", items[2].key
+    assert_equal "[object: UnknownClass]", items[2].value
+    assert_equal 6, items[2].line
+  end
+
+  test "items from content with duplicated keys" do
+    content = File.read("test/fixtures/no_nested.yml")
+    items = Flatito::FlattenYaml.items_from_content(content)
+
+    assert_equal 3, items.size
+    assert_equal "one", items[0].key
+    assert_equal "One", items[0].value
+    assert_equal 1, items[0].line
   end
 end

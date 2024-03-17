@@ -1,9 +1,26 @@
 # frozen_string_literal: true
 
+require_relative "utils"
 module Flatito
   class FlattenYaml
+    include Utils
+
     Item = Struct.new(:key, :value, :line, keyword_init: true)
-    def initialize(pathname)
+    class << self
+      def items_from_path(pathname)
+        content = File.read(pathname)
+        new(content, pathname: pathname).items
+      end
+
+      def items_from_content(content)
+        new(content).items
+      end
+    end
+
+    attr_reader :content, :pathname
+
+    def initialize(content, pathname: nil)
+      @content = content
       @pathname = pathname
     end
 
@@ -23,28 +40,20 @@ module Flatito
           end
         end
       end
-    rescue StandardError => e
-      warn "Error parsing #{@pathname}, #{e.message}"
     end
 
     def with_line_numbers
       handler = YAMLWithLineNumber::TreeBuilder.new
       handler.parser = Psych::Parser.new(handler)
 
-      handler.parser.parse(File.read(@pathname))
+      handler.parser.parse(content)
       YAMLWithLineNumber::VisitorsToRuby.create.accept(handler.root)
     rescue Psych::SyntaxError
-      warn "Invalid YAML #{@pathname}"
-
+      warn "Invalid format #{pathname}"
       []
-    rescue StandardError => e
-      warn "Error parsing #{@pathname}, #{e.message}"
-
+    rescue StandardError
+      warn "Error parsing #{pathname}"
       []
-    end
-
-    def truncate(string, max = 50)
-      string.length > max ? "#{string[0...max]}..." : string
     end
   end
 end

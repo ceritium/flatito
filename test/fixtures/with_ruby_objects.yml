@@ -3,6 +3,6 @@ two: !ruby/object:OpenStruct
   table:
     one: One
     two: Two
-three: !ruby/object:UnknowClass
+three: !ruby/object:UnknownClass
   one: One
   two: Two

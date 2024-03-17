@@ -2,25 +2,23 @@
 
 require "io/console"
 require_relative "regex_from_search"
+require_relative "utils"
 
 module Flatito
   class Renderer
-    include RegexFromSearch
-
     def self.build(options)
-      if tty?
+      if Config.stdout.tty?
         Renderer::TTY.new(options)
       else
         Renderer::Plain.new(options)
       end
     end
-
-    def self.tty?
-      $stdout.tty?
-    end
   end
 
   class Base
+    include Utils
+    include RegexFromSearch
+
     attr_reader :search, :no_color
 
     def initialize(options)
@@ -33,7 +31,7 @@ module Flatito
     def ending; end
 
     def print_pathname(pathname)
-      puts colorize(pathname.to_s, :light_blue)
+      stdout.puts colorize(pathname.to_s, :light_blue)
     end
 
     def print_items(items)
@@ -42,8 +40,8 @@ module Flatito
       items.each do |item|
         print_item(item, line_number_padding)
       end
-      puts
-      flush
+      stdout.puts
+      stdout.flush
     end
 
     def print_item(item, line_number_padding)
@@ -54,18 +52,10 @@ module Flatito
                 ""
               end
 
-      puts "#{line_number} #{matched_string(item.key)} #{value}"
+      stdout.puts "#{line_number} #{matched_string(item.key)} #{value}"
     end
 
     private
-
-    def flush
-      stdout.flush
-    end
-
-    def regex
-      @regex ||= Regexp.new(search)
-    end
 
     def matched_string(string)
       return string if search.nil? || no_color?
@@ -80,12 +70,8 @@ module Flatito
       ENV["TERM"] == "dumb" || ENV["NO_COLOR"] == "true" || no_color == true
     end
 
-    def truncate(string, max = 50)
-      string.length > max ? "#{string[0...max]}..." : string
-    end
-
     def stdout
-      $stdout
+      Config.stdout
     end
 
     def colorize(string, color)
@@ -95,7 +81,7 @@ module Flatito
 
   class Renderer::Plain < Base
     def ending
-      puts
+      stdout.puts
     end
   end
 
@@ -128,19 +114,19 @@ module Flatito
     def ending
       clear_line
       show_cursor
-      puts
+      stdout.puts
     end
 
     def hide_cursor
-      print HIDE_CURSOR
+      stdout.print HIDE_CURSOR
     end
 
     def show_cursor
-      print SHOW_CURSOR
+      stdout.print SHOW_CURSOR
     end
 
     def clear_line
-      print CLEAR_LINE
+      stdout.print CLEAR_LINE
     end
 
     private
