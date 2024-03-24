@@ -6,14 +6,15 @@ require "flatito"
 require "optparse"
 
 # If no arguments are given, print help
-ARGV << "-h" if ARGV.empty?
+stdin = $stdin.read unless $stdin.tty?
+ARGV << "-h" if ARGV.empty? && !stdin
 
 options = {}
 OptionParser.new do |opts|
   opts.banner = <<~HEREDOC
     Usage:    flatito PATH [options]
-    Example:  flatito . -k hello
-
+    Example:  flatito . -k "search string" -e "json,yaml"
+    Example:  cat file.yaml | flatito -k "search string"
   HEREDOC
 
   opts.on("-h", "--help", "Prints this help") do
@@ -43,8 +44,10 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-begin
+Flatito::Config.prepare_with_options(options)
+
+if stdin
+  Flatito.flat_content(stdin, options)
+else
   Flatito.search(ARGV, options)
-rescue Interrupt
-  warn "\nInterrupted"
 end

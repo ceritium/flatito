@@ -8,14 +8,14 @@ module Flatito
 
     DEFAULT_EXTENSIONS = %w[json yml yaml].freeze
 
-    attr_reader :paths, :search, :extensions, :options, :renderer
+    attr_reader :paths, :search, :extensions, :options, :print_items
 
     def initialize(paths, options = {})
       @paths = paths
       @search = options[:search]
       @extensions = prepare_extensions(options[:extensions] || DEFAULT_EXTENSIONS)
       @options = options
-      @renderer = Renderer.build(options)
+      @print_items = PrintItems.new(search)
     end
 
     def call
@@ -36,25 +36,18 @@ module Flatito
 
     private
 
+    def renderer
+      Config.renderer
+    end
+
     def flat_and_filter(pathname)
-      items = FlattenYaml.new(pathname).items
-      items = filter_by_search(items) if search
-
-      return unless items.any?
-
-      renderer.print_pathname(pathname)
-      renderer.print_items(items)
+      items = FlattenYaml.items_from_path(pathname)
+      print_items.print(items, pathname)
     end
 
     def prepare_extensions(extensions)
       extensions.map do |ext|
         ext.start_with?(".") ? ext : ".#{ext}"
-      end
-    end
-
-    def filter_by_search(items)
-      items.select do |item|
-        regex.match?(item.key)
       end
     end
   end

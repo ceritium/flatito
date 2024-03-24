@@ -22,7 +22,8 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ```sh
 Usage:    flatito PATH [options]
-Example:  flatito . -k hello
+Example:  flatito . -k "search string" -e "json,yaml"
+Example:  cat file.yaml | flatito -k "search string"
 
     -h, --help                       Prints this help
     -V, --version                    Show version
