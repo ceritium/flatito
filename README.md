@@ -6,7 +6,7 @@ A kind of grep for YAML and JSON files. It allows you to search for a key and ge
 
 ## Meaning
 
-[Esperanto](https://en.wiktionary.org/wiki/flatito): singular past nominal passive participle of flati.
+[Esperanto](https://en.wiktionary.org/wiki/flatito): singular past nominal passive participle of flati ('to flatter').
 
 ## Installation
 
