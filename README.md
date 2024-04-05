@@ -18,6 +18,13 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
     $ gem install flatito
 
+### Nixpkgs package
+
+It is also available as [nixpkgs](https://search.nixos.org/packages?channel=unstable&show=flatito) thanks to [@Rucadi](https://github.com/Rucadi)
+
+    $ nix run nixpkgs#flatito
+
+
 ## Usage
 
 ```sh
