@@ -8,6 +8,11 @@ A kind of grep for YAML and JSON files. It allows you to search for a key and ge
 
 [Esperanto](https://en.wiktionary.org/wiki/flatito): singular past nominal passive participle of flati ('to flatter').
 
+## Sponsor
+
+This project is sponsored by [babelfu.com](https://babelfu.com)
+[![Babelfu is a Github based translation service](https://babelfu.com/banner.png)](https://babelfu.com)
+
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:
