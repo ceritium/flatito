@@ -9,7 +9,7 @@ GEM
   specs:
     ast (2.4.2)
     colorize (1.1.0)
-    json (2.10.1)
+    json (2.10.2)
     language_server-protocol (3.17.0.4)
     lint_roller (1.1.0)
     minitest (5.25.4)
@@ -21,7 +21,7 @@ GEM
     rainbow (3.1.1)
     rake (13.2.1)
     regexp_parser (2.10.0)
-    rubocop (1.73.2)
+    rubocop (1.74.0)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
@@ -58,7 +58,7 @@ DEPENDENCIES
   flatito!
   minitest (~> 5.25)
   rake (~> 13.2)
-  rubocop (~> 1.73)
+  rubocop (~> 1.74)
   rubocop-minitest (~> 0.37)
   rubocop-performance (~> 1.24)
   rubocop-rake (~> 0.7)
