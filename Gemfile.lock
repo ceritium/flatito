@@ -7,21 +7,21 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    ast (2.4.2)
+    ast (2.4.3)
     colorize (1.1.0)
-    json (2.10.1)
+    json (2.10.2)
     language_server-protocol (3.17.0.4)
     lint_roller (1.1.0)
-    minitest (5.25.4)
+    minitest (5.25.5)
     parallel (1.26.3)
-    parser (3.3.7.1)
+    parser (3.3.7.2)
       ast (~> 2.4.1)
       racc
     racc (1.8.1)
     rainbow (3.1.1)
     rake (13.2.1)
     regexp_parser (2.10.0)
-    rubocop (1.73.2)
+    rubocop (1.74.0)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
@@ -32,8 +32,8 @@ GEM
       rubocop-ast (>= 1.38.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 4.0)
-    rubocop-ast (1.38.1)
-      parser (>= 3.3.1.0)
+    rubocop-ast (1.41.0)
+      parser (>= 3.3.7.2)
     rubocop-minitest (0.37.1)
       lint_roller (~> 1.1)
       rubocop (>= 1.72.1, < 2.0)
@@ -51,7 +51,6 @@ GEM
     unicode-emoji (4.0.4)
 
 PLATFORMS
-  arm64-darwin-22
   ruby
 
 DEPENDENCIES
@@ -64,4 +63,4 @@ DEPENDENCIES
   rubocop-rake (~> 0.7)
 
 BUNDLED WITH
-   2.5.6
+   2.6.3
