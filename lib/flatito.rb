@@ -22,7 +22,7 @@ module Flatito
 
     def flat_content(content, options = {})
       items = FlattenYaml.items_from_content(content)
-      PrintItems.new(options[:search]).print(items)
+      PrintItems.new(options[:search], options[:search_value]).print(items)
     end
   end
 end

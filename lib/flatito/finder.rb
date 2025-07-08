@@ -8,14 +8,15 @@ module Flatito
 
     DEFAULT_EXTENSIONS = %w[json yml yaml].freeze
 
-    attr_reader :paths, :search, :extensions, :options, :print_items
+    attr_reader :paths, :search, :search_value, :extensions, :options, :print_items
 
     def initialize(paths, options = {})
       @paths = paths
       @search = options[:search]
+      @search_value = options[:search_value]
       @extensions = prepare_extensions(options[:extensions] || DEFAULT_EXTENSIONS)
       @options = options
-      @print_items = PrintItems.new(search)
+      @print_items = PrintItems.new(search, search_value)
     end
 
     def call

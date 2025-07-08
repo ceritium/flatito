@@ -31,6 +31,10 @@ OptionParser.new do |opts|
     options[:search] = s
   end
 
+  opts.on("-vSEARCH", "--search-value=SEARCH", "Search value") do |v|
+    options[:search_value] = v
+  end
+
   opts.on("--no-color", "Disable color output") do
     options[:no_color] = true
   end
