@@ -34,4 +34,15 @@ class Flatito::PrintItemsValueFilterTest < Minitest::Test
     assert_equal "two", filtered[0].key
     assert_equal "[object: OpenStruct]", filtered[0].value
   end
+
+  test "filters by value with long text that would be truncated" do
+    items = items_from_fixture("long_value.yml")
+    # Search for text that appears after the 50-character truncation limit
+    filtered = Flatito::PrintItems.new(nil, "searchable").filter_by_value(items)
+
+    assert_equal 1, filtered.size
+    assert_equal "long_key", filtered[0].key
+    # The full value should be available for filtering even if it gets truncated for display
+    assert_match(/searchable/, filtered[0].value)
+  end
 end

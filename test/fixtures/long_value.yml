@@ -1,0 +1,2 @@
+short_key: short_value
+long_key: "This is a very long value that exceeds the default truncation limit of 50 characters and should be searchable even when truncated for display"

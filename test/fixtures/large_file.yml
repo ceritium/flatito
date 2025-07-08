@@ -1,0 +1,169 @@
+# Large YAML file for performance testing
+app:
+  name: "Large Application"
+  version: "1.0.0"
+  description: "This is a large application with many configuration options and nested structures to test performance"
+
+database:
+  primary:
+    host: "primary-db.example.com"
+    port: 5432
+    name: "production_db"
+    username: "app_user"
+    password: "very_secure_password_that_is_quite_long_and_complex"
+    pool_size: 20
+    timeout: 30000
+    ssl_mode: "require"
+    backup_retention_days: 30
+  
+  secondary:
+    host: "secondary-db.example.com"
+    port: 5432
+    name: "production_db_readonly"
+    username: "readonly_user"
+    password: "another_very_secure_password_for_readonly_access"
+    pool_size: 10
+    timeout: 15000
+    ssl_mode: "require"
+
+redis:
+  cache:
+    host: "cache-redis.example.com"
+    port: 6379
+    database: 0
+    password: "redis_cache_password_that_is_also_very_long_and_secure"
+    timeout: 5000
+    max_connections: 50
+  
+  sessions:
+    host: "sessions-redis.example.com"
+    port: 6379
+    database: 1
+    password: "redis_sessions_password_with_different_complexity"
+    timeout: 3000
+    max_connections: 25
+
+services:
+  email:
+    provider: "sendgrid"
+    api_key: "SG.very_long_api_key_that_would_definitely_exceed_truncation_limits_in_normal_display"
+    from_address: "noreply@example.com"
+    templates:
+      welcome: "d-1234567890abcdef"
+      password_reset: "d-abcdef1234567890"
+      notification: "d-567890abcdef1234"
+  
+  storage:
+    provider: "aws_s3"
+    bucket: "app-production-storage"
+    region: "us-east-1"
+    access_key_id: "AKIAIOSFODNN7EXAMPLE"
+    secret_access_key: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+    cdn_url: "https://cdn.example.com"
+  
+  monitoring:
+    datadog:
+      api_key: "very_long_datadog_api_key_for_monitoring_and_alerting_purposes"
+      app_key: "another_long_key_for_datadog_application_access_and_configuration"
+      tags:
+        - "env:production"
+        - "service:web"
+        - "version:1.0.0"
+        - "team:backend"
+    
+    sentry:
+      dsn: "https://very_long_sentry_dsn_url_that_contains_project_and_auth_information@sentry.io/project"
+      environment: "production"
+      release: "1.0.0"
+      sample_rate: 0.1
+
+features:
+  authentication:
+    enabled: true
+    providers:
+      - "google"
+      - "github"
+      - "facebook"
+    session_timeout: 3600
+    remember_me_duration: 2592000
+  
+  api:
+    enabled: true
+    rate_limiting:
+      requests_per_minute: 1000
+      burst_limit: 100
+    authentication:
+      required: true
+      methods:
+        - "api_key"
+        - "jwt"
+        - "oauth2"
+  
+  notifications:
+    email:
+      enabled: true
+      queue: "email_notifications"
+    push:
+      enabled: true
+      providers:
+        - "fcm"
+        - "apns"
+    sms:
+      enabled: false
+      provider: "twilio"
+
+logging:
+  level: "info"
+  format: "json"
+  outputs:
+    - type: "file"
+      path: "/var/log/app/application.log"
+      rotation: "daily"
+      retention_days: 7
+    - type: "stdout"
+      format: "pretty"
+    - type: "syslog"
+      facility: "local0"
+      tag: "webapp"
+
+metrics:
+  enabled: true
+  interval: 60
+  collectors:
+    - "system"
+    - "application"
+    - "database"
+    - "redis"
+  exporters:
+    - type: "prometheus"
+      endpoint: "/metrics"
+      port: 9090
+    - type: "statsd"
+      host: "statsd.example.com"
+      port: 8125
+
+security:
+  cors:
+    enabled: true
+    allowed_origins:
+      - "https://app.example.com"
+      - "https://admin.example.com"
+    allowed_methods:
+      - "GET"
+      - "POST"
+      - "PUT"
+      - "DELETE"
+    allowed_headers:
+      - "Authorization"
+      - "Content-Type"
+      - "X-Requested-With"
+  
+  csrf:
+    enabled: true
+    token_length: 32
+    cookie_name: "_csrf_token"
+  
+  ssl:
+    enforce: true
+    hsts_max_age: 31536000
+    include_subdomains: true

@@ -1,0 +1,2801 @@
+---
+section_0:
+  id: 0
+  name: Item 0 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 0 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-1T00:00:00Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.0.0
+    tags:
+    - tag_0
+    - category_0
+    - type_0
+    properties:
+      enabled: true
+      priority: 0
+      weight: 0.0
+      configuration:
+        timeout: 30000
+        retries: 3
+        buffer_size: 1024
+        compression: true
+        encryption:
+          enabled: true
+          algorithm: aes256
+          key_rotation_days: 30
+section_1:
+  id: 1
+  name: Item 1 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 1 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-2T01:01:01Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.1.1
+    tags:
+    - tag_1
+    - category_1
+    - type_1
+    properties:
+      enabled: false
+      priority: 1
+      weight: 1.5
+      configuration:
+        timeout: 30100
+        retries: 4
+        buffer_size: 2048
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 31
+section_2:
+  id: 2
+  name: Item 2 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 2 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-3T02:02:02Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.2.2
+    tags:
+    - tag_2
+    - category_2
+    - type_2
+    properties:
+      enabled: true
+      priority: 2
+      weight: 3.0
+      configuration:
+        timeout: 30200
+        retries: 5
+        buffer_size: 3072
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 32
+section_3:
+  id: 3
+  name: Item 3 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 3 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-4T03:03:03Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.3.3
+    tags:
+    - tag_3
+    - category_3
+    - type_0
+    properties:
+      enabled: false
+      priority: 3
+      weight: 4.5
+      configuration:
+        timeout: 30300
+        retries: 6
+        buffer_size: 4096
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 33
+section_4:
+  id: 4
+  name: Item 4 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 4 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-5T04:04:04Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.4.4
+    tags:
+    - tag_4
+    - category_4
+    - type_1
+    properties:
+      enabled: true
+      priority: 4
+      weight: 6.0
+      configuration:
+        timeout: 30400
+        retries: 7
+        buffer_size: 5120
+        compression: false
+        encryption:
+          enabled: true
+          algorithm: rsa
+          key_rotation_days: 34
+section_5:
+  id: 5
+  name: Item 5 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 5 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-6T05:05:05Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.5.5
+    tags:
+    - tag_5
+    - category_0
+    - type_2
+    properties:
+      enabled: false
+      priority: 0
+      weight: 7.5
+      configuration:
+        timeout: 30500
+        retries: 3
+        buffer_size: 6144
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 35
+section_6:
+  id: 6
+  name: Item 6 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 6 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-7T06:06:06Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.6.6
+    tags:
+    - tag_6
+    - category_1
+    - type_0
+    properties:
+      enabled: true
+      priority: 1
+      weight: 9.0
+      configuration:
+        timeout: 30600
+        retries: 4
+        buffer_size: 7168
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 36
+section_7:
+  id: 7
+  name: Item 7 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 7 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-8T07:07:07Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.7.7
+    tags:
+    - tag_7
+    - category_2
+    - type_1
+    properties:
+      enabled: false
+      priority: 2
+      weight: 10.5
+      configuration:
+        timeout: 30700
+        retries: 5
+        buffer_size: 8192
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 37
+section_8:
+  id: 8
+  name: Item 8 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 8 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-9T08:08:08Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.8.8
+    tags:
+    - tag_8
+    - category_3
+    - type_2
+    properties:
+      enabled: true
+      priority: 3
+      weight: 12.0
+      configuration:
+        timeout: 30800
+        retries: 6
+        buffer_size: 1024
+        compression: false
+        encryption:
+          enabled: true
+          algorithm: ecdsa
+          key_rotation_days: 38
+section_9:
+  id: 9
+  name: Item 9 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 9 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-10T09:09:09Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.9.9
+    tags:
+    - tag_9
+    - category_4
+    - type_0
+    properties:
+      enabled: false
+      priority: 4
+      weight: 13.5
+      configuration:
+        timeout: 30900
+        retries: 7
+        buffer_size: 2048
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 39
+section_10:
+  id: 10
+  name: Item 10 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 10 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-11T10:10:10Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.10.0
+    tags:
+    - tag_0
+    - category_0
+    - type_1
+    properties:
+      enabled: true
+      priority: 0
+      weight: 15.0
+      configuration:
+        timeout: 31000
+        retries: 3
+        buffer_size: 3072
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 40
+section_11:
+  id: 11
+  name: Item 11 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 11 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-12T11:11:11Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.11.1
+    tags:
+    - tag_1
+    - category_1
+    - type_2
+    properties:
+      enabled: false
+      priority: 1
+      weight: 16.5
+      configuration:
+        timeout: 31100
+        retries: 4
+        buffer_size: 4096
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 41
+section_12:
+  id: 12
+  name: Item 12 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 12 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-13T12:12:12Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.12.2
+    tags:
+    - tag_2
+    - category_2
+    - type_0
+    properties:
+      enabled: true
+      priority: 2
+      weight: 18.0
+      configuration:
+        timeout: 31200
+        retries: 5
+        buffer_size: 5120
+        compression: true
+        encryption:
+          enabled: true
+          algorithm: aes256
+          key_rotation_days: 42
+section_13:
+  id: 13
+  name: Item 13 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 13 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-14T13:13:13Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.13.3
+    tags:
+    - tag_3
+    - category_3
+    - type_1
+    properties:
+      enabled: false
+      priority: 3
+      weight: 19.5
+      configuration:
+        timeout: 31300
+        retries: 6
+        buffer_size: 6144
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 43
+section_14:
+  id: 14
+  name: Item 14 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 14 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-15T14:14:14Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.14.4
+    tags:
+    - tag_4
+    - category_4
+    - type_2
+    properties:
+      enabled: true
+      priority: 4
+      weight: 21.0
+      configuration:
+        timeout: 31400
+        retries: 7
+        buffer_size: 7168
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 44
+section_15:
+  id: 15
+  name: Item 15 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 15 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-16T15:15:15Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.15.5
+    tags:
+    - tag_5
+    - category_0
+    - type_0
+    properties:
+      enabled: false
+      priority: 0
+      weight: 22.5
+      configuration:
+        timeout: 31500
+        retries: 3
+        buffer_size: 8192
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 45
+section_16:
+  id: 16
+  name: Item 16 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 16 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-17T16:16:16Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.16.6
+    tags:
+    - tag_6
+    - category_1
+    - type_1
+    properties:
+      enabled: true
+      priority: 1
+      weight: 24.0
+      configuration:
+        timeout: 31600
+        retries: 4
+        buffer_size: 1024
+        compression: false
+        encryption:
+          enabled: true
+          algorithm: rsa
+          key_rotation_days: 46
+section_17:
+  id: 17
+  name: Item 17 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 17 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-18T17:17:17Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.17.7
+    tags:
+    - tag_7
+    - category_2
+    - type_2
+    properties:
+      enabled: false
+      priority: 2
+      weight: 25.5
+      configuration:
+        timeout: 31700
+        retries: 5
+        buffer_size: 2048
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 47
+section_18:
+  id: 18
+  name: Item 18 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 18 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-19T18:18:18Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.18.8
+    tags:
+    - tag_8
+    - category_3
+    - type_0
+    properties:
+      enabled: true
+      priority: 3
+      weight: 27.0
+      configuration:
+        timeout: 31800
+        retries: 6
+        buffer_size: 3072
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 48
+section_19:
+  id: 19
+  name: Item 19 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 19 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-20T19:19:19Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.19.9
+    tags:
+    - tag_9
+    - category_4
+    - type_1
+    properties:
+      enabled: false
+      priority: 4
+      weight: 28.5
+      configuration:
+        timeout: 31900
+        retries: 7
+        buffer_size: 4096
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 49
+section_20:
+  id: 20
+  name: Item 20 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 20 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-21T20:20:20Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.20.0
+    tags:
+    - tag_0
+    - category_0
+    - type_2
+    properties:
+      enabled: true
+      priority: 0
+      weight: 30.0
+      configuration:
+        timeout: 32000
+        retries: 3
+        buffer_size: 5120
+        compression: false
+        encryption:
+          enabled: true
+          algorithm: ecdsa
+          key_rotation_days: 50
+section_21:
+  id: 21
+  name: Item 21 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 21 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-22T21:21:21Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.21.1
+    tags:
+    - tag_1
+    - category_1
+    - type_0
+    properties:
+      enabled: false
+      priority: 1
+      weight: 31.5
+      configuration:
+        timeout: 32100
+        retries: 4
+        buffer_size: 6144
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 51
+section_22:
+  id: 22
+  name: Item 22 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 22 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-23T22:22:22Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.22.2
+    tags:
+    - tag_2
+    - category_2
+    - type_1
+    properties:
+      enabled: true
+      priority: 2
+      weight: 33.0
+      configuration:
+        timeout: 32200
+        retries: 5
+        buffer_size: 7168
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 52
+section_23:
+  id: 23
+  name: Item 23 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 23 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-24T23:23:23Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.23.3
+    tags:
+    - tag_3
+    - category_3
+    - type_2
+    properties:
+      enabled: false
+      priority: 3
+      weight: 34.5
+      configuration:
+        timeout: 32300
+        retries: 6
+        buffer_size: 8192
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 53
+section_24:
+  id: 24
+  name: Item 24 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 24 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-25T00:24:24Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.24.4
+    tags:
+    - tag_4
+    - category_4
+    - type_0
+    properties:
+      enabled: true
+      priority: 4
+      weight: 36.0
+      configuration:
+        timeout: 32400
+        retries: 7
+        buffer_size: 1024
+        compression: true
+        encryption:
+          enabled: true
+          algorithm: aes256
+          key_rotation_days: 54
+section_25:
+  id: 25
+  name: Item 25 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 25 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-26T01:25:25Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.25.5
+    tags:
+    - tag_5
+    - category_0
+    - type_1
+    properties:
+      enabled: false
+      priority: 0
+      weight: 37.5
+      configuration:
+        timeout: 32500
+        retries: 3
+        buffer_size: 2048
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 55
+section_26:
+  id: 26
+  name: Item 26 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 26 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-27T02:26:26Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.26.6
+    tags:
+    - tag_6
+    - category_1
+    - type_2
+    properties:
+      enabled: true
+      priority: 1
+      weight: 39.0
+      configuration:
+        timeout: 32600
+        retries: 4
+        buffer_size: 3072
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 56
+section_27:
+  id: 27
+  name: Item 27 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 27 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-28T03:27:27Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.27.7
+    tags:
+    - tag_7
+    - category_2
+    - type_0
+    properties:
+      enabled: false
+      priority: 2
+      weight: 40.5
+      configuration:
+        timeout: 32700
+        retries: 5
+        buffer_size: 4096
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 57
+section_28:
+  id: 28
+  name: Item 28 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 28 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-1T04:28:28Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.28.8
+    tags:
+    - tag_8
+    - category_3
+    - type_1
+    properties:
+      enabled: true
+      priority: 3
+      weight: 42.0
+      configuration:
+        timeout: 32800
+        retries: 6
+        buffer_size: 5120
+        compression: false
+        encryption:
+          enabled: true
+          algorithm: rsa
+          key_rotation_days: 58
+section_29:
+  id: 29
+  name: Item 29 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 29 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-2T05:29:29Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.29.9
+    tags:
+    - tag_9
+    - category_4
+    - type_2
+    properties:
+      enabled: false
+      priority: 4
+      weight: 43.5
+      configuration:
+        timeout: 32900
+        retries: 7
+        buffer_size: 6144
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 59
+section_30:
+  id: 30
+  name: Item 30 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 30 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-3T06:30:30Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.30.0
+    tags:
+    - tag_0
+    - category_0
+    - type_0
+    properties:
+      enabled: true
+      priority: 0
+      weight: 45.0
+      configuration:
+        timeout: 33000
+        retries: 3
+        buffer_size: 7168
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 60
+section_31:
+  id: 31
+  name: Item 31 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 31 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-4T07:31:31Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.31.1
+    tags:
+    - tag_1
+    - category_1
+    - type_1
+    properties:
+      enabled: false
+      priority: 1
+      weight: 46.5
+      configuration:
+        timeout: 33100
+        retries: 4
+        buffer_size: 8192
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 61
+section_32:
+  id: 32
+  name: Item 32 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 32 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-5T08:32:32Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.32.2
+    tags:
+    - tag_2
+    - category_2
+    - type_2
+    properties:
+      enabled: true
+      priority: 2
+      weight: 48.0
+      configuration:
+        timeout: 33200
+        retries: 5
+        buffer_size: 1024
+        compression: false
+        encryption:
+          enabled: true
+          algorithm: ecdsa
+          key_rotation_days: 62
+section_33:
+  id: 33
+  name: Item 33 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 33 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-6T09:33:33Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.33.3
+    tags:
+    - tag_3
+    - category_3
+    - type_0
+    properties:
+      enabled: false
+      priority: 3
+      weight: 49.5
+      configuration:
+        timeout: 33300
+        retries: 6
+        buffer_size: 2048
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 63
+section_34:
+  id: 34
+  name: Item 34 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 34 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-7T10:34:34Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.34.4
+    tags:
+    - tag_4
+    - category_4
+    - type_1
+    properties:
+      enabled: true
+      priority: 4
+      weight: 51.0
+      configuration:
+        timeout: 33400
+        retries: 7
+        buffer_size: 3072
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 64
+section_35:
+  id: 35
+  name: Item 35 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 35 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-8T11:35:35Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.35.5
+    tags:
+    - tag_5
+    - category_0
+    - type_2
+    properties:
+      enabled: false
+      priority: 0
+      weight: 52.5
+      configuration:
+        timeout: 33500
+        retries: 3
+        buffer_size: 4096
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 65
+section_36:
+  id: 36
+  name: Item 36 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 36 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-9T12:36:36Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.36.6
+    tags:
+    - tag_6
+    - category_1
+    - type_0
+    properties:
+      enabled: true
+      priority: 1
+      weight: 54.0
+      configuration:
+        timeout: 33600
+        retries: 4
+        buffer_size: 5120
+        compression: true
+        encryption:
+          enabled: true
+          algorithm: aes256
+          key_rotation_days: 66
+section_37:
+  id: 37
+  name: Item 37 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 37 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-10T13:37:37Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.37.7
+    tags:
+    - tag_7
+    - category_2
+    - type_1
+    properties:
+      enabled: false
+      priority: 2
+      weight: 55.5
+      configuration:
+        timeout: 33700
+        retries: 5
+        buffer_size: 6144
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 67
+section_38:
+  id: 38
+  name: Item 38 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 38 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-11T14:38:38Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.38.8
+    tags:
+    - tag_8
+    - category_3
+    - type_2
+    properties:
+      enabled: true
+      priority: 3
+      weight: 57.0
+      configuration:
+        timeout: 33800
+        retries: 6
+        buffer_size: 7168
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 68
+section_39:
+  id: 39
+  name: Item 39 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 39 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-12T15:39:39Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.39.9
+    tags:
+    - tag_9
+    - category_4
+    - type_0
+    properties:
+      enabled: false
+      priority: 4
+      weight: 58.5
+      configuration:
+        timeout: 33900
+        retries: 7
+        buffer_size: 8192
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 69
+section_40:
+  id: 40
+  name: Item 40 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 40 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-13T16:40:40Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.40.0
+    tags:
+    - tag_0
+    - category_0
+    - type_1
+    properties:
+      enabled: true
+      priority: 0
+      weight: 60.0
+      configuration:
+        timeout: 34000
+        retries: 3
+        buffer_size: 1024
+        compression: false
+        encryption:
+          enabled: true
+          algorithm: rsa
+          key_rotation_days: 70
+section_41:
+  id: 41
+  name: Item 41 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 41 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-14T17:41:41Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.41.1
+    tags:
+    - tag_1
+    - category_1
+    - type_2
+    properties:
+      enabled: false
+      priority: 1
+      weight: 61.5
+      configuration:
+        timeout: 34100
+        retries: 4
+        buffer_size: 2048
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 71
+section_42:
+  id: 42
+  name: Item 42 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 42 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-15T18:42:42Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.42.2
+    tags:
+    - tag_2
+    - category_2
+    - type_0
+    properties:
+      enabled: true
+      priority: 2
+      weight: 63.0
+      configuration:
+        timeout: 34200
+        retries: 5
+        buffer_size: 3072
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 72
+section_43:
+  id: 43
+  name: Item 43 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 43 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-16T19:43:43Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.43.3
+    tags:
+    - tag_3
+    - category_3
+    - type_1
+    properties:
+      enabled: false
+      priority: 3
+      weight: 64.5
+      configuration:
+        timeout: 34300
+        retries: 6
+        buffer_size: 4096
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 73
+section_44:
+  id: 44
+  name: Item 44 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 44 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-17T20:44:44Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.44.4
+    tags:
+    - tag_4
+    - category_4
+    - type_2
+    properties:
+      enabled: true
+      priority: 4
+      weight: 66.0
+      configuration:
+        timeout: 34400
+        retries: 7
+        buffer_size: 5120
+        compression: false
+        encryption:
+          enabled: true
+          algorithm: ecdsa
+          key_rotation_days: 74
+section_45:
+  id: 45
+  name: Item 45 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 45 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-18T21:45:45Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.45.5
+    tags:
+    - tag_5
+    - category_0
+    - type_0
+    properties:
+      enabled: false
+      priority: 0
+      weight: 67.5
+      configuration:
+        timeout: 34500
+        retries: 3
+        buffer_size: 6144
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 75
+section_46:
+  id: 46
+  name: Item 46 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 46 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-19T22:46:46Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.46.6
+    tags:
+    - tag_6
+    - category_1
+    - type_1
+    properties:
+      enabled: true
+      priority: 1
+      weight: 69.0
+      configuration:
+        timeout: 34600
+        retries: 4
+        buffer_size: 7168
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 76
+section_47:
+  id: 47
+  name: Item 47 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 47 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-20T23:47:47Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.47.7
+    tags:
+    - tag_7
+    - category_2
+    - type_2
+    properties:
+      enabled: false
+      priority: 2
+      weight: 70.5
+      configuration:
+        timeout: 34700
+        retries: 5
+        buffer_size: 8192
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 77
+section_48:
+  id: 48
+  name: Item 48 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 48 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-21T00:48:48Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.48.8
+    tags:
+    - tag_8
+    - category_3
+    - type_0
+    properties:
+      enabled: true
+      priority: 3
+      weight: 72.0
+      configuration:
+        timeout: 34800
+        retries: 6
+        buffer_size: 1024
+        compression: true
+        encryption:
+          enabled: true
+          algorithm: aes256
+          key_rotation_days: 78
+section_49:
+  id: 49
+  name: Item 49 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 49 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-22T01:49:49Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.49.9
+    tags:
+    - tag_9
+    - category_4
+    - type_1
+    properties:
+      enabled: false
+      priority: 4
+      weight: 73.5
+      configuration:
+        timeout: 34900
+        retries: 7
+        buffer_size: 2048
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 79
+section_50:
+  id: 50
+  name: Item 50 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 50 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-23T02:50:50Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.50.0
+    tags:
+    - tag_0
+    - category_0
+    - type_2
+    properties:
+      enabled: true
+      priority: 0
+      weight: 75.0
+      configuration:
+        timeout: 35000
+        retries: 3
+        buffer_size: 3072
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 80
+section_51:
+  id: 51
+  name: Item 51 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 51 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-24T03:51:51Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.51.1
+    tags:
+    - tag_1
+    - category_1
+    - type_0
+    properties:
+      enabled: false
+      priority: 1
+      weight: 76.5
+      configuration:
+        timeout: 35100
+        retries: 4
+        buffer_size: 4096
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 81
+section_52:
+  id: 52
+  name: Item 52 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 52 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-25T04:52:52Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.52.2
+    tags:
+    - tag_2
+    - category_2
+    - type_1
+    properties:
+      enabled: true
+      priority: 2
+      weight: 78.0
+      configuration:
+        timeout: 35200
+        retries: 5
+        buffer_size: 5120
+        compression: false
+        encryption:
+          enabled: true
+          algorithm: rsa
+          key_rotation_days: 82
+section_53:
+  id: 53
+  name: Item 53 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 53 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-26T05:53:53Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.53.3
+    tags:
+    - tag_3
+    - category_3
+    - type_2
+    properties:
+      enabled: false
+      priority: 3
+      weight: 79.5
+      configuration:
+        timeout: 35300
+        retries: 6
+        buffer_size: 6144
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 83
+section_54:
+  id: 54
+  name: Item 54 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 54 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-27T06:54:54Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.54.4
+    tags:
+    - tag_4
+    - category_4
+    - type_0
+    properties:
+      enabled: true
+      priority: 4
+      weight: 81.0
+      configuration:
+        timeout: 35400
+        retries: 7
+        buffer_size: 7168
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 84
+section_55:
+  id: 55
+  name: Item 55 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 55 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-28T07:55:55Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.55.5
+    tags:
+    - tag_5
+    - category_0
+    - type_1
+    properties:
+      enabled: false
+      priority: 0
+      weight: 82.5
+      configuration:
+        timeout: 35500
+        retries: 3
+        buffer_size: 8192
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 85
+section_56:
+  id: 56
+  name: Item 56 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 56 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-1T08:56:56Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.56.6
+    tags:
+    - tag_6
+    - category_1
+    - type_2
+    properties:
+      enabled: true
+      priority: 1
+      weight: 84.0
+      configuration:
+        timeout: 35600
+        retries: 4
+        buffer_size: 1024
+        compression: false
+        encryption:
+          enabled: true
+          algorithm: ecdsa
+          key_rotation_days: 86
+section_57:
+  id: 57
+  name: Item 57 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 57 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-2T09:57:57Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.57.7
+    tags:
+    - tag_7
+    - category_2
+    - type_0
+    properties:
+      enabled: false
+      priority: 2
+      weight: 85.5
+      configuration:
+        timeout: 35700
+        retries: 5
+        buffer_size: 2048
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 87
+section_58:
+  id: 58
+  name: Item 58 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 58 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-3T10:58:58Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.58.8
+    tags:
+    - tag_8
+    - category_3
+    - type_1
+    properties:
+      enabled: true
+      priority: 3
+      weight: 87.0
+      configuration:
+        timeout: 35800
+        retries: 6
+        buffer_size: 3072
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 88
+section_59:
+  id: 59
+  name: Item 59 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 59 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-4T11:59:59Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.59.9
+    tags:
+    - tag_9
+    - category_4
+    - type_2
+    properties:
+      enabled: false
+      priority: 4
+      weight: 88.5
+      configuration:
+        timeout: 35900
+        retries: 7
+        buffer_size: 4096
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 89
+section_60:
+  id: 60
+  name: Item 60 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 60 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-5T12:00:00Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.60.0
+    tags:
+    - tag_0
+    - category_0
+    - type_0
+    properties:
+      enabled: true
+      priority: 0
+      weight: 90.0
+      configuration:
+        timeout: 36000
+        retries: 3
+        buffer_size: 5120
+        compression: true
+        encryption:
+          enabled: true
+          algorithm: aes256
+          key_rotation_days: 30
+section_61:
+  id: 61
+  name: Item 61 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 61 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-6T13:01:01Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.61.1
+    tags:
+    - tag_1
+    - category_1
+    - type_1
+    properties:
+      enabled: false
+      priority: 1
+      weight: 91.5
+      configuration:
+        timeout: 36100
+        retries: 4
+        buffer_size: 6144
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 31
+section_62:
+  id: 62
+  name: Item 62 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 62 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-7T14:02:02Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.62.2
+    tags:
+    - tag_2
+    - category_2
+    - type_2
+    properties:
+      enabled: true
+      priority: 2
+      weight: 93.0
+      configuration:
+        timeout: 36200
+        retries: 5
+        buffer_size: 7168
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 32
+section_63:
+  id: 63
+  name: Item 63 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 63 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-8T15:03:03Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.63.3
+    tags:
+    - tag_3
+    - category_3
+    - type_0
+    properties:
+      enabled: false
+      priority: 3
+      weight: 94.5
+      configuration:
+        timeout: 36300
+        retries: 6
+        buffer_size: 8192
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 33
+section_64:
+  id: 64
+  name: Item 64 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 64 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-9T16:04:04Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.64.4
+    tags:
+    - tag_4
+    - category_4
+    - type_1
+    properties:
+      enabled: true
+      priority: 4
+      weight: 96.0
+      configuration:
+        timeout: 36400
+        retries: 7
+        buffer_size: 1024
+        compression: false
+        encryption:
+          enabled: true
+          algorithm: rsa
+          key_rotation_days: 34
+section_65:
+  id: 65
+  name: Item 65 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 65 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-10T17:05:05Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.65.5
+    tags:
+    - tag_5
+    - category_0
+    - type_2
+    properties:
+      enabled: false
+      priority: 0
+      weight: 97.5
+      configuration:
+        timeout: 36500
+        retries: 3
+        buffer_size: 2048
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 35
+section_66:
+  id: 66
+  name: Item 66 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 66 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-11T18:06:06Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.66.6
+    tags:
+    - tag_6
+    - category_1
+    - type_0
+    properties:
+      enabled: true
+      priority: 1
+      weight: 99.0
+      configuration:
+        timeout: 36600
+        retries: 4
+        buffer_size: 3072
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 36
+section_67:
+  id: 67
+  name: Item 67 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 67 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-12T19:07:07Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.67.7
+    tags:
+    - tag_7
+    - category_2
+    - type_1
+    properties:
+      enabled: false
+      priority: 2
+      weight: 100.5
+      configuration:
+        timeout: 36700
+        retries: 5
+        buffer_size: 4096
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 37
+section_68:
+  id: 68
+  name: Item 68 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 68 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-13T20:08:08Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.68.8
+    tags:
+    - tag_8
+    - category_3
+    - type_2
+    properties:
+      enabled: true
+      priority: 3
+      weight: 102.0
+      configuration:
+        timeout: 36800
+        retries: 6
+        buffer_size: 5120
+        compression: false
+        encryption:
+          enabled: true
+          algorithm: ecdsa
+          key_rotation_days: 38
+section_69:
+  id: 69
+  name: Item 69 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 69 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-14T21:09:09Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.69.9
+    tags:
+    - tag_9
+    - category_4
+    - type_0
+    properties:
+      enabled: false
+      priority: 4
+      weight: 103.5
+      configuration:
+        timeout: 36900
+        retries: 7
+        buffer_size: 6144
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 39
+section_70:
+  id: 70
+  name: Item 70 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 70 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-15T22:10:10Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.70.0
+    tags:
+    - tag_0
+    - category_0
+    - type_1
+    properties:
+      enabled: true
+      priority: 0
+      weight: 105.0
+      configuration:
+        timeout: 37000
+        retries: 3
+        buffer_size: 7168
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 40
+section_71:
+  id: 71
+  name: Item 71 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 71 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-16T23:11:11Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.71.1
+    tags:
+    - tag_1
+    - category_1
+    - type_2
+    properties:
+      enabled: false
+      priority: 1
+      weight: 106.5
+      configuration:
+        timeout: 37100
+        retries: 4
+        buffer_size: 8192
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 41
+section_72:
+  id: 72
+  name: Item 72 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 72 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-17T00:12:12Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.72.2
+    tags:
+    - tag_2
+    - category_2
+    - type_0
+    properties:
+      enabled: true
+      priority: 2
+      weight: 108.0
+      configuration:
+        timeout: 37200
+        retries: 5
+        buffer_size: 1024
+        compression: true
+        encryption:
+          enabled: true
+          algorithm: aes256
+          key_rotation_days: 42
+section_73:
+  id: 73
+  name: Item 73 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 73 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-18T01:13:13Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.73.3
+    tags:
+    - tag_3
+    - category_3
+    - type_1
+    properties:
+      enabled: false
+      priority: 3
+      weight: 109.5
+      configuration:
+        timeout: 37300
+        retries: 6
+        buffer_size: 2048
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 43
+section_74:
+  id: 74
+  name: Item 74 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 74 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-19T02:14:14Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.74.4
+    tags:
+    - tag_4
+    - category_4
+    - type_2
+    properties:
+      enabled: true
+      priority: 4
+      weight: 111.0
+      configuration:
+        timeout: 37400
+        retries: 7
+        buffer_size: 3072
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 44
+section_75:
+  id: 75
+  name: Item 75 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 75 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-20T03:15:15Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.75.5
+    tags:
+    - tag_5
+    - category_0
+    - type_0
+    properties:
+      enabled: false
+      priority: 0
+      weight: 112.5
+      configuration:
+        timeout: 37500
+        retries: 3
+        buffer_size: 4096
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 45
+section_76:
+  id: 76
+  name: Item 76 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 76 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-21T04:16:16Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.76.6
+    tags:
+    - tag_6
+    - category_1
+    - type_1
+    properties:
+      enabled: true
+      priority: 1
+      weight: 114.0
+      configuration:
+        timeout: 37600
+        retries: 4
+        buffer_size: 5120
+        compression: false
+        encryption:
+          enabled: true
+          algorithm: rsa
+          key_rotation_days: 46
+section_77:
+  id: 77
+  name: Item 77 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 77 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-22T05:17:17Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.77.7
+    tags:
+    - tag_7
+    - category_2
+    - type_2
+    properties:
+      enabled: false
+      priority: 2
+      weight: 115.5
+      configuration:
+        timeout: 37700
+        retries: 5
+        buffer_size: 6144
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 47
+section_78:
+  id: 78
+  name: Item 78 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 78 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-23T06:18:18Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.78.8
+    tags:
+    - tag_8
+    - category_3
+    - type_0
+    properties:
+      enabled: true
+      priority: 3
+      weight: 117.0
+      configuration:
+        timeout: 37800
+        retries: 6
+        buffer_size: 7168
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 48
+section_79:
+  id: 79
+  name: Item 79 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 79 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-24T07:19:19Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.79.9
+    tags:
+    - tag_9
+    - category_4
+    - type_1
+    properties:
+      enabled: false
+      priority: 4
+      weight: 118.5
+      configuration:
+        timeout: 37900
+        retries: 7
+        buffer_size: 8192
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 49
+section_80:
+  id: 80
+  name: Item 80 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 80 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-25T08:20:20Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.80.0
+    tags:
+    - tag_0
+    - category_0
+    - type_2
+    properties:
+      enabled: true
+      priority: 0
+      weight: 120.0
+      configuration:
+        timeout: 38000
+        retries: 3
+        buffer_size: 1024
+        compression: false
+        encryption:
+          enabled: true
+          algorithm: ecdsa
+          key_rotation_days: 50
+section_81:
+  id: 81
+  name: Item 81 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 81 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-26T09:21:21Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.81.1
+    tags:
+    - tag_1
+    - category_1
+    - type_0
+    properties:
+      enabled: false
+      priority: 1
+      weight: 121.5
+      configuration:
+        timeout: 38100
+        retries: 4
+        buffer_size: 2048
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 51
+section_82:
+  id: 82
+  name: Item 82 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 82 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-27T10:22:22Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.82.2
+    tags:
+    - tag_2
+    - category_2
+    - type_1
+    properties:
+      enabled: true
+      priority: 2
+      weight: 123.0
+      configuration:
+        timeout: 38200
+        retries: 5
+        buffer_size: 3072
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 52
+section_83:
+  id: 83
+  name: Item 83 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 83 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-28T11:23:23Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.83.3
+    tags:
+    - tag_3
+    - category_3
+    - type_2
+    properties:
+      enabled: false
+      priority: 3
+      weight: 124.5
+      configuration:
+        timeout: 38300
+        retries: 6
+        buffer_size: 4096
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 53
+section_84:
+  id: 84
+  name: Item 84 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 84 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-1T12:24:24Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.84.4
+    tags:
+    - tag_4
+    - category_4
+    - type_0
+    properties:
+      enabled: true
+      priority: 4
+      weight: 126.0
+      configuration:
+        timeout: 38400
+        retries: 7
+        buffer_size: 5120
+        compression: true
+        encryption:
+          enabled: true
+          algorithm: aes256
+          key_rotation_days: 54
+section_85:
+  id: 85
+  name: Item 85 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 85 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-2T13:25:25Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.85.5
+    tags:
+    - tag_5
+    - category_0
+    - type_1
+    properties:
+      enabled: false
+      priority: 0
+      weight: 127.5
+      configuration:
+        timeout: 38500
+        retries: 3
+        buffer_size: 6144
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 55
+section_86:
+  id: 86
+  name: Item 86 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 86 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-3T14:26:26Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.86.6
+    tags:
+    - tag_6
+    - category_1
+    - type_2
+    properties:
+      enabled: true
+      priority: 1
+      weight: 129.0
+      configuration:
+        timeout: 38600
+        retries: 4
+        buffer_size: 7168
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 56
+section_87:
+  id: 87
+  name: Item 87 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 87 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-4T15:27:27Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.87.7
+    tags:
+    - tag_7
+    - category_2
+    - type_0
+    properties:
+      enabled: false
+      priority: 2
+      weight: 130.5
+      configuration:
+        timeout: 38700
+        retries: 5
+        buffer_size: 8192
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 57
+section_88:
+  id: 88
+  name: Item 88 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 88 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-5T16:28:28Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.88.8
+    tags:
+    - tag_8
+    - category_3
+    - type_1
+    properties:
+      enabled: true
+      priority: 3
+      weight: 132.0
+      configuration:
+        timeout: 38800
+        retries: 6
+        buffer_size: 1024
+        compression: false
+        encryption:
+          enabled: true
+          algorithm: rsa
+          key_rotation_days: 58
+section_89:
+  id: 89
+  name: Item 89 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 89 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-6T17:29:29Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.89.9
+    tags:
+    - tag_9
+    - category_4
+    - type_2
+    properties:
+      enabled: false
+      priority: 4
+      weight: 133.5
+      configuration:
+        timeout: 38900
+        retries: 7
+        buffer_size: 2048
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 59
+section_90:
+  id: 90
+  name: Item 90 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 90 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-7T18:30:30Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.90.0
+    tags:
+    - tag_0
+    - category_0
+    - type_0
+    properties:
+      enabled: true
+      priority: 0
+      weight: 135.0
+      configuration:
+        timeout: 39000
+        retries: 3
+        buffer_size: 3072
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 60
+section_91:
+  id: 91
+  name: Item 91 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 91 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-8T19:31:31Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.91.1
+    tags:
+    - tag_1
+    - category_1
+    - type_1
+    properties:
+      enabled: false
+      priority: 1
+      weight: 136.5
+      configuration:
+        timeout: 39100
+        retries: 4
+        buffer_size: 4096
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 61
+section_92:
+  id: 92
+  name: Item 92 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 92 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-9T20:32:32Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.92.2
+    tags:
+    - tag_2
+    - category_2
+    - type_2
+    properties:
+      enabled: true
+      priority: 2
+      weight: 138.0
+      configuration:
+        timeout: 39200
+        retries: 5
+        buffer_size: 5120
+        compression: false
+        encryption:
+          enabled: true
+          algorithm: ecdsa
+          key_rotation_days: 62
+section_93:
+  id: 93
+  name: Item 93 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 93 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-10T21:33:33Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.93.3
+    tags:
+    - tag_3
+    - category_3
+    - type_0
+    properties:
+      enabled: false
+      priority: 3
+      weight: 139.5
+      configuration:
+        timeout: 39300
+        retries: 6
+        buffer_size: 6144
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 63
+section_94:
+  id: 94
+  name: Item 94 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 94 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-11T22:34:34Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.94.4
+    tags:
+    - tag_4
+    - category_4
+    - type_1
+    properties:
+      enabled: true
+      priority: 4
+      weight: 141.0
+      configuration:
+        timeout: 39400
+        retries: 7
+        buffer_size: 7168
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 64
+section_95:
+  id: 95
+  name: Item 95 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 95 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-12T23:35:35Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.95.5
+    tags:
+    - tag_5
+    - category_0
+    - type_2
+    properties:
+      enabled: false
+      priority: 0
+      weight: 142.5
+      configuration:
+        timeout: 39500
+        retries: 3
+        buffer_size: 8192
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 65
+section_96:
+  id: 96
+  name: Item 96 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 96 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-13T00:36:36Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.96.6
+    tags:
+    - tag_6
+    - category_1
+    - type_0
+    properties:
+      enabled: true
+      priority: 1
+      weight: 144.0
+      configuration:
+        timeout: 39600
+        retries: 4
+        buffer_size: 1024
+        compression: true
+        encryption:
+          enabled: true
+          algorithm: aes256
+          key_rotation_days: 66
+section_97:
+  id: 97
+  name: Item 97 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 97 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-14T01:37:37Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.97.7
+    tags:
+    - tag_7
+    - category_2
+    - type_1
+    properties:
+      enabled: false
+      priority: 2
+      weight: 145.5
+      configuration:
+        timeout: 39700
+        retries: 5
+        buffer_size: 2048
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: rsa
+          key_rotation_days: 67
+section_98:
+  id: 98
+  name: Item 98 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 98 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-15T02:38:38Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.98.8
+    tags:
+    - tag_8
+    - category_3
+    - type_2
+    properties:
+      enabled: true
+      priority: 3
+      weight: 147.0
+      configuration:
+        timeout: 39800
+        retries: 6
+        buffer_size: 3072
+        compression: false
+        encryption:
+          enabled: false
+          algorithm: ecdsa
+          key_rotation_days: 68
+section_99:
+  id: 99
+  name: Item 99 with a very long name that will test truncation and filtering performance
+  description: This is a detailed description for item 99 that contains multiple sentences
+    and should be long enough to trigger truncation in most cases. It includes various
+    keywords like performance, memory, cpu, benchmark, and testing to make search
+    operations more realistic.
+  metadata:
+    created_at: '2025-01-16T03:39:39Z'
+    updated_at: '2025-07-08T12:00:00Z'
+    version: 1.99.9
+    tags:
+    - tag_9
+    - category_4
+    - type_0
+    properties:
+      enabled: false
+      priority: 4
+      weight: 148.5
+      configuration:
+        timeout: 39900
+        retries: 7
+        buffer_size: 4096
+        compression: true
+        encryption:
+          enabled: false
+          algorithm: aes256
+          key_rotation_days: 69
