@@ -7,7 +7,7 @@ gemspec
 
 gem "minitest", "~> 5.25"
 gem "rake", "~> 13.3"
-gem "rubocop", "~> 1.78"
+gem "rubocop", "~> 1.79"
 gem "rubocop-minitest", "~> 0.38"
 gem "rubocop-performance", "~> 1.25"
 gem "rubocop-rake", "~> 0.7"
