@@ -1,3 +1,35 @@
+
+<div align="right">
+  <details>
+    <summary >🌐 Language</summary>
+    <div>
+      <div align="center">
+        <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=en">English</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=zh-CN">简体中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=zh-TW">繁體中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=ja">日本語</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=ko">한국어</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=hi">हिन्दी</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=th">ไทย</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=fr">Français</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=de">Deutsch</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=es">Español</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=it">Italiano</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=ru">Русский</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=pt">Português</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=nl">Nederlands</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=pl">Polski</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=ar">العربية</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=fa">فارسی</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=tr">Türkçe</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=vi">Tiếng Việt</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=id">Bahasa Indonesia</a>
+        | <a href="https://openaitx.github.io/view.html?user=ceritium&project=flatito&lang=as">অসমীয়া</
+      </div>
+    </div>
+  </details>
+</div>
+
 # Flatito: Grep for YAML and JSON files
 
 A kind of grep for YAML and JSON files. It allows you to search for a key and get the value and the line number where it is located.
