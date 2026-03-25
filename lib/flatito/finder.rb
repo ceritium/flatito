@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "English"
+require "etc"
 require "set"
 require_relative "regex_from_search"
 
@@ -22,18 +23,18 @@ module Flatito
       @print_items = PrintItems.new(search, search_value, case_sensitive: case_sensitive)
     end
 
+    FORK_THRESHOLD = 100
+
     def call
       @matched = false
       renderer.prepare
 
-      paths.each do |path|
-        TreeIterator.new(path, options).each do |pathname|
-          renderer.print_file_progress(pathname)
+      files = collect_candidate_files
 
-          if extensions.include?(pathname.extname)
-            flat_and_filter(pathname)
-          end
-        end
+      if files.size >= FORK_THRESHOLD && Process.respond_to?(:fork)
+        process_with_forks(files)
+      else
+        files.each { |pathname| flat_and_filter(pathname) }
       end
 
       @matched
@@ -45,6 +46,57 @@ module Flatito
 
     def renderer
       Config.renderer
+    end
+
+    def collect_candidate_files
+      files = []
+      paths.each do |path|
+        TreeIterator.new(path, options).each do |pathname|
+          renderer.print_file_progress(pathname)
+          next unless extensions.include?(pathname.extname)
+          next if git_candidates && !git_candidates.include?(File.expand_path(pathname.to_s))
+
+          files << pathname
+        end
+      end
+      files
+    end
+
+    def process_with_forks(files)
+      workers = [Etc.nprocessors, files.size].min
+      chunks = files.each_slice((files.size / workers.to_f).ceil).to_a
+
+      readers = chunks.map do |chunk|
+        rd, wr = IO.pipe
+        Process.fork do
+          rd.close
+          results = chunk.filter_map { |pathname| read_and_parse(pathname) }
+          Marshal.dump(results, wr)
+          wr.close
+        end
+        wr.close
+        rd
+      end
+
+      readers.each do |rd|
+        data = rd.read
+        rd.close
+        next if data.empty?
+
+        Marshal.load(data).each do |pathname, items| # rubocop:disable Security/MarshalLoad
+          @matched = true if print_items.print(items, pathname)
+        end
+      end
+
+      Process.waitall
+    end
+
+    def read_and_parse(pathname)
+      content = File.read(pathname)
+      return unless content_may_match?(content)
+
+      items = FlattenYaml.items_from_content(content, pathname: pathname)
+      [pathname, items]
     end
 
     def flat_and_filter(pathname)
