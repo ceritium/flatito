@@ -22,6 +22,18 @@ module Flatito
     end
 
     def items
+      if json?
+        result = JsonScanner.scan(content)
+        return result if result
+      end
+
+      psych_items
+    rescue StandardError
+      warn "Error parsing #{pathname}" if pathname
+      []
+    end
+
+    def psych_items
       with_line_numbers.filter_map do |line|
         flatten_hash(line) if line.is_a?(Hash)
       end.flatten
@@ -38,6 +50,10 @@ module Flatito
           Item.new(key: full_key, value: value.value.to_s, line: value.line)
         end
       end
+    end
+
+    def json?
+      content.lstrip.start_with?("{", "[")
     end
 
     def with_line_numbers
