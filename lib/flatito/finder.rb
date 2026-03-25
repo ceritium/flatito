@@ -23,17 +23,13 @@ module Flatito
     end
 
     def call
+      @matched = false
       renderer.prepare
 
-      paths.each do |path|
-        TreeIterator.new(path, options).each do |pathname|
-          renderer.print_file_progress(pathname)
+      files = collect_candidate_files
+      process_in_parallel(files)
 
-          if extensions.include?(pathname.extname)
-            flat_and_filter(pathname)
-          end
-        end
-      end
+      @matched
     ensure
       renderer.ending
     end
@@ -44,14 +40,40 @@ module Flatito
       Config.renderer
     end
 
-    def flat_and_filter(pathname)
-      return if git_candidates && !git_candidates.include?(File.expand_path(pathname.to_s))
+    def collect_candidate_files
+      files = []
+      paths.each do |path|
+        TreeIterator.new(path, options).each do |pathname|
+          renderer.print_file_progress(pathname)
+          next unless extensions.include?(pathname.extname)
+          next if git_candidates && !git_candidates.include?(File.expand_path(pathname.to_s))
 
+          files << pathname
+        end
+      end
+      files
+    end
+
+    def process_in_parallel(files)
+      return if files.empty?
+
+      parsed = files.each_slice([files.size / 4 + 1, 1].max).map { |batch|
+        Thread.new(batch) do |file_batch|
+          file_batch.filter_map { |pathname| read_and_parse(pathname) }
+        end
+      }.flat_map(&:value)
+
+      parsed.each do |pathname, items|
+        @matched = true if print_items.print(items, pathname)
+      end
+    end
+
+    def read_and_parse(pathname)
       content = File.read(pathname)
       return unless git_candidates || content_may_match?(content)
 
       items = FlattenYaml.items_from_content(content, pathname: pathname)
-      print_items.print(items, pathname)
+      [pathname, items]
     end
 
     def git_candidates

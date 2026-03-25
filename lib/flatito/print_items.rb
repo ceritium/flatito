@@ -15,10 +15,11 @@ module Flatito
     def print(items, pathname = nil)
       items = filter_by_search(items) if search
       items = filter_by_value(items) if search_value
-      return unless items.any?
+      return false unless items.any?
 
       renderer.print_pathname(pathname) if pathname
       renderer.print_items(items)
+      true
     end
 
     def filter_by_search(items)

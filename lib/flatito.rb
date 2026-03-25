@@ -19,11 +19,12 @@ module Flatito
       Finder.new(paths, options).call
     rescue Interrupt
       warn "\nInterrupted"
+      nil
     end
 
     def flat_content(content, options = {})
       items = FlattenYaml.items_from_content(content)
-      PrintItems.new(options[:search], options[:search_value], case_sensitive: options[:case_sensitive]).print(items)
+      PrintItems.new(options[:search], options[:search_value], case_sensitive: options[:case_sensitive]).print(items) || false
     end
   end
 end
