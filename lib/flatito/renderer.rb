@@ -123,7 +123,7 @@ module Flatito
     end
 
     def print_file_progress(pathname)
-      print truncate(pathname.to_s, stdout_width - 4)
+      stdout.print truncate(pathname.to_s, stdout_width - 4)
       clear_line
     end
 
