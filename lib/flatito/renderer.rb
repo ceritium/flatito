@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require "io/console"
 require_relative "regex_from_search"
 require_relative "utils"
 
@@ -63,28 +62,18 @@ module Flatito
     def matched_string(string)
       return string if search.nil? || no_color?
 
-      regex.match(string).to_a.each do |match|
-        string = string.gsub(/#{match}/, match.colorize(:light_red))
-      end
-      string
+      string.gsub(regex) { |match| match.colorize(:light_red) }
     end
 
     def matched_value(string, default_color)
       return colorize(string, default_color) if search_value.nil? || no_color?
 
-      value_regex.match(string).to_a.each do |match|
-        string = string.gsub(/#{match}/, match.colorize(:light_red))
-      end
-      string
+      string.gsub(value_regex) { |match| match.colorize(:light_red) }
     end
 
     def truncate_value(string)
       match_position = search_value && value_regex.match(string)&.begin(0)
       truncate(string, match_position: match_position)
-    end
-
-    def value_regex
-      @value_regex ||= Regexp.new(search_value, case_sensitive ? nil : Regexp::IGNORECASE)
     end
 
     def no_color?
@@ -123,7 +112,7 @@ module Flatito
     end
 
     def print_file_progress(pathname)
-      stdout.print truncate(pathname.to_s, stdout_width - 4)
+      stdout.print truncate(pathname.to_s, max: stdout_width - 4)
       clear_line
     end
 
