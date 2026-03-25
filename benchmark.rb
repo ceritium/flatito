@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "English"
 require "flatito"
 
 # --- Helpers ---
@@ -13,16 +14,16 @@ def measure_time(times, &block)
   elapsed
 end
 
-def measure_memory(&block)
+def measure_memory
   GC.start
   GC.compact if GC.respond_to?(:compact)
-  before_mem = `ps -o rss= -p #{$$}`.strip.to_i
+  before_mem = `ps -o rss= -p #{$PROCESS_ID}`.strip.to_i
   before_gc = GC.stat[:total_allocated_objects]
 
-  block.call
+  yield
 
   after_gc = GC.stat[:total_allocated_objects]
-  after_mem = `ps -o rss= -p #{$$}`.strip.to_i
+  after_mem = `ps -o rss= -p #{$PROCESS_ID}`.strip.to_i
 
   { rss_kb: after_mem - before_mem, objects: after_gc - before_gc }
 end
@@ -109,12 +110,12 @@ puts "\n[Memory - large parse]"
 GC.start
 GC.compact if GC.respond_to?(:compact)
 before = GC.stat[:total_allocated_objects]
-rss_before = `ps -o rss= -p #{$$}`.strip.to_i
+rss_before = `ps -o rss= -p #{$PROCESS_ID}`.strip.to_i
 large_yaml = (1..5000).map { |i| "key_#{i}: Value number #{i} with a longer description to simulate real data" }.join("\n")
 Flatito::FlattenYaml.items_from_content(large_yaml)
 after = GC.stat[:total_allocated_objects]
-rss_after = `ps -o rss= -p #{$$}`.strip.to_i
+rss_after = `ps -o rss= -p #{$PROCESS_ID}`.strip.to_i
 puts format("  %-40s RSS: %+6d KB  |  Allocs: %d", "parse 5000 keys YAML", rss_after - rss_before, after - before)
 
 null_io.close
-puts "\n" + "=" * 90
+puts "\n#{"=" * 90}"

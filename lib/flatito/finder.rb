@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "English"
 require "set"
 require_relative "regex_from_search"
 
@@ -86,7 +87,7 @@ module Flatito
       args.push("--", ".")
 
       output = IO.popen(args, err: File::NULL, &:read)
-      return nil unless [0, 1].include?($?.exitstatus)
+      return nil unless [0, 1].include?($CHILD_STATUS.exitstatus)
 
       Set.new(output.lines.map { |f| File.expand_path(f.chomp, expanded_dir) })
     rescue Errno::ENOENT

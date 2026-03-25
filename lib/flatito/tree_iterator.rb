@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "English"
 require "set"
 
 module Flatito
@@ -51,7 +52,7 @@ module Flatito
     def build_ignored_dirs
       base = File.expand_path(base_path)
       output = `git -C "#{base}" ls-files --others --ignored --exclude-standard --directory 2>/dev/null`
-      return [] unless $?.success?
+      return [] unless $CHILD_STATUS.success?
 
       output.lines.filter_map do |line|
         path = line.chomp
