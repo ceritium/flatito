@@ -50,6 +50,10 @@ OptionParser.new do |opts|
   opts.on("--no-skipping", "Do not skip hidden files") do
     options[:skip_hidden] = false
   end
+
+  opts.on("--no-gitignore", "Do not respect .gitignore") do
+    options[:gitignore] = false
+  end
 end.parse!
 
 Flatito::Config.prepare_with_options(options)

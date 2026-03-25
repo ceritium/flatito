@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "set"
 require_relative "regex_from_search"
 
 module Flatito
@@ -43,11 +44,53 @@ module Flatito
     end
 
     def flat_and_filter(pathname)
+      return if git_candidates && !git_candidates.include?(File.expand_path(pathname.to_s))
+
       content = File.read(pathname)
-      return unless content_may_match?(content)
+      return unless git_candidates || content_may_match?(content)
 
       items = FlattenYaml.items_from_content(content, pathname: pathname)
       print_items.print(items, pathname)
+    end
+
+    def git_candidates
+      return @git_candidates if defined?(@git_candidates)
+
+      @git_candidates = build_git_candidates
+    end
+
+    def build_git_candidates
+      return nil if search.nil? && search_value.nil?
+
+      patterns = []
+      patterns.concat(search.split(".")) if search
+      patterns << search_value if search_value
+
+      candidates = Set.new
+      paths.each do |path|
+        dir = File.directory?(path) ? path : File.dirname(path)
+        files = git_grep(dir, patterns)
+        return nil if files.nil?
+
+        candidates.merge(files)
+      end
+      candidates
+    end
+
+    def git_grep(dir, patterns)
+      expanded_dir = File.expand_path(dir)
+      args = ["git", "-C", expanded_dir, "grep", "--untracked", "-l"]
+      args << "-i" unless case_sensitive
+      args << "--all-match" if patterns.size > 1
+      patterns.each { |p| args.push("-e", p) }
+      args.push("--", ".")
+
+      output = IO.popen(args, err: File::NULL, &:read)
+      return nil unless [0, 1].include?($?.exitstatus)
+
+      Set.new(output.lines.map { |f| File.expand_path(f.chomp, expanded_dir) })
+    rescue Errno::ENOENT
+      nil
     end
 
     def content_may_match?(content)
