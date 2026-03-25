@@ -1,10 +1,7 @@
 # frozen_string_literal: true
 
-require_relative "utils"
 module Flatito
   class FlattenYaml
-    include Utils
-
     Item = Struct.new(:key, :value, :line, keyword_init: true)
     class << self
       def items_from_path(pathname)
@@ -25,19 +22,20 @@ module Flatito
     end
 
     def items
-      with_line_numbers.compact.flat_map do |line|
+      with_line_numbers.filter_map do |line|
         flatten_hash(line) if line.is_a?(Hash)
-      end.compact
+      end.flatten
     end
 
     def flatten_hash(hash, prefix = nil)
-      hash.flat_map do |key, value|
-        if value.is_a?(YAMLWithLineNumber::ValueWithLineNumbers)
-          if value.value.is_a?(Hash)
-            flatten_hash(value.value, [prefix, key].compact.join("."))
-          else
-            Item.new(key: [prefix, key].compact.join("."), value: value.value.to_s, line: value.line)
-          end
+      hash.filter_map do |key, value|
+        next unless value.is_a?(YAMLWithLineNumber::ValueWithLineNumbers)
+
+        full_key = prefix ? "#{prefix}.#{key}" : key
+        if value.value.is_a?(Hash)
+          flatten_hash(value.value, full_key)
+        else
+          Item.new(key: full_key, value: value.value.to_s, line: value.line)
         end
       end
     end

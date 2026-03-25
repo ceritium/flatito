@@ -8,7 +8,7 @@ module Flatito
 
     def initialize(base_path, options = {})
       @base_path = base_path
-      @skip_hidden = options[:skip_hidden] || true
+      @skip_hidden = options.fetch(:skip_hidden, true)
     end
 
     def each(&block)

@@ -25,6 +25,7 @@ module Flatito
       @search = options[:search]
       @search_value = options[:search_value]
       @case_sensitive = options[:case_sensitive]
+      @no_color_resolved = nil
     end
 
     def prepare; end
@@ -77,7 +78,9 @@ module Flatito
     end
 
     def no_color?
-      ENV["TERM"] == "dumb" || ENV["NO_COLOR"] == "true" || no_color == true
+      return @no_color_resolved unless @no_color_resolved.nil?
+
+      @no_color_resolved = ENV["TERM"] == "dumb" || ENV["NO_COLOR"] == "true" || no_color == true
     end
 
     def stdout
