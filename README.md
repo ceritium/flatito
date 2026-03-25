@@ -41,6 +41,7 @@ Example:  cat file.yaml | flatito -k "search string"
         --no-color                   Disable color output
     -e, --extensions=EXTENSIONS      File extensions to search, separated by comma, default: (json,yaml,yaml)
         --no-skipping                Do not skip hidden files
+        --no-gitignore               Do not respect .gitignore
 ```
 
 Searches are case-insensitive by default. Use `-s` to force exact case matching.
