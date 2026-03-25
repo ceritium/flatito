@@ -12,7 +12,7 @@ module Flatito
       @case_sensitive = case_sensitive
     end
 
-    def print(items, pathname = nil)
+    def print(items, pathname = nil) # rubocop:disable Naming/PredicateMethod
       items = filter_by_search(items) if search
       items = filter_by_value(items) if search_value
       return false unless items.any?
