@@ -59,9 +59,9 @@ end.parse!
 Flatito::Config.prepare_with_options(options)
 
 matched = if stdin
-             Flatito.flat_content(stdin, options)
-           else
-             Flatito.search(ARGV, options)
-           end
+            Flatito.flat_content(stdin, options)
+          else
+            Flatito.search(ARGV, options)
+          end
 
 exit 1 unless matched
