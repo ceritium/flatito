@@ -36,7 +36,7 @@ module Flatito
           if value.value.is_a?(Hash)
             flatten_hash(value.value, [prefix, key].compact.join("."))
           else
-            Item.new(key: [prefix, key].compact.join("."), value: truncate(value.value.to_s), line: value.line)
+            Item.new(key: [prefix, key].compact.join("."), value: value.value.to_s, line: value.line)
           end
         end
       end

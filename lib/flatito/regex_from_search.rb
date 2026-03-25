@@ -3,7 +3,7 @@
 module Flatito
   module RegexFromSearch
     def regex
-      @regex ||= Regexp.new(search)
+      @regex ||= Regexp.new(search, case_sensitive ? nil : Regexp::IGNORECASE)
     end
   end
 end

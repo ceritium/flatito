@@ -19,11 +19,13 @@ module Flatito
     include Utils
     include RegexFromSearch
 
-    attr_reader :search, :no_color
+    attr_reader :search, :search_value, :no_color, :case_sensitive
 
     def initialize(options)
       @no_color = options[:no_color] || false
       @search = options[:search]
+      @search_value = options[:search_value]
+      @case_sensitive = options[:case_sensitive]
     end
 
     def prepare; end
@@ -47,7 +49,8 @@ module Flatito
     def print_item(item, line_number_padding)
       line_number = colorize("#{item.line.to_s.rjust(line_number_padding)}: ", :yellow)
       value = if item.value.length.positive?
-                colorize("=> #{item.value}", :gray)
+                display_value = truncate_value(item.value)
+                colorize("=> ", :gray) + matched_value(display_value, :gray)
               else
                 ""
               end
@@ -64,6 +67,24 @@ module Flatito
         string = string.gsub(/#{match}/, match.colorize(:light_red))
       end
       string
+    end
+
+    def matched_value(string, default_color)
+      return colorize(string, default_color) if search_value.nil? || no_color?
+
+      value_regex.match(string).to_a.each do |match|
+        string = string.gsub(/#{match}/, match.colorize(:light_red))
+      end
+      string
+    end
+
+    def truncate_value(string)
+      match_position = search_value && value_regex.match(string)&.begin(0)
+      truncate(string, match_position: match_position)
+    end
+
+    def value_regex
+      @value_regex ||= Regexp.new(search_value, case_sensitive ? nil : Regexp::IGNORECASE)
     end
 
     def no_color?

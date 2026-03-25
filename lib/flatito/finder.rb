@@ -15,7 +15,7 @@ module Flatito
       @search = options[:search]
       @extensions = prepare_extensions(options[:extensions] || DEFAULT_EXTENSIONS)
       @options = options
-      @print_items = PrintItems.new(search)
+      @print_items = PrintItems.new(search, options[:search_value], case_sensitive: options[:case_sensitive])
     end
 
     def call

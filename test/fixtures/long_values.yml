@@ -1,0 +1,5 @@
+short: hello
+description: This is a very long description that exceeds the fifty character truncation limit by quite a bit
+nested:
+  bio: Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore
+  title: Short title
