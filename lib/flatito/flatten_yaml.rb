@@ -9,8 +9,8 @@ module Flatito
         new(content, pathname: pathname).items
       end
 
-      def items_from_content(content)
-        new(content).items
+      def items_from_content(content, pathname: nil)
+        new(content, pathname: pathname).items
       end
     end
 
