@@ -3,6 +3,7 @@
 module Flatito
   class PrintItems
     include RegexFromSearch
+
     attr_reader :search
 
     def initialize(search)

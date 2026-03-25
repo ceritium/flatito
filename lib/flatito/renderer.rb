@@ -60,7 +60,7 @@ module Flatito
     def matched_string(string)
       return string if search.nil? || no_color?
 
-      regex.match(string).to_a&.each do |match|
+      regex.match(string).to_a.each do |match|
         string = string.gsub(/#{match}/, match.colorize(:light_red))
       end
       string
