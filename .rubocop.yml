@@ -3,9 +3,10 @@ AllCops:
   NewCops: enable
   Exclude:
     - "benchmark.rb"
+    - "vendor/**/*"
 
 
-require:
+plugins:
   - rubocop-performance
   - rubocop-minitest
   - rubocop-rake
