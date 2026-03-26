@@ -13,6 +13,7 @@ OptionParser.new do |opts|
   opts.banner = <<~HEREDOC
     Usage:    flatito PATH [options]
     Example:  flatito . -k "search string" -e "json,yaml"
+    Example:  flatito . -c "search value"
     Example:  cat file.yaml | flatito -k "search string"
   HEREDOC
 
@@ -26,8 +27,16 @@ OptionParser.new do |opts|
     exit
   end
 
-  opts.on("-kSEARCH", "--search-key=SEARCH", "Search string") do |s|
+  opts.on("-kSEARCH", "--search-key=SEARCH", "Search by key") do |s|
     options[:search] = s
+  end
+
+  opts.on("-cSEARCH", "--search-value=SEARCH", "Search by value") do |s|
+    options[:search_value] = s
+  end
+
+  opts.on("-s", "--case-sensitive", "Case sensitive search") do
+    options[:case_sensitive] = true
   end
 
   opts.on("--no-color", "Disable color output") do
@@ -41,12 +50,18 @@ OptionParser.new do |opts|
   opts.on("--no-skipping", "Do not skip hidden files") do
     options[:skip_hidden] = false
   end
+
+  opts.on("--no-gitignore", "Do not respect .gitignore") do
+    options[:gitignore] = false
+  end
 end.parse!
 
 Flatito::Config.prepare_with_options(options)
 
-if stdin
-  Flatito.flat_content(stdin, options)
-else
-  Flatito.search(ARGV, options)
-end
+matched = if stdin
+            Flatito.flat_content(stdin, options)
+          else
+            Flatito.search(ARGV, options)
+          end
+
+exit 1 unless matched

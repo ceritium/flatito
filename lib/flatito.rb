@@ -5,6 +5,7 @@ require "colorize"
 require_relative "flatito/version"
 require_relative "flatito/tree_iterator"
 require_relative "flatito/flatten_yaml"
+require_relative "flatito/json_scanner"
 require_relative "flatito/finder"
 require_relative "flatito/yaml_with_line_number"
 require_relative "flatito/renderer"
@@ -18,11 +19,12 @@ module Flatito
       Finder.new(paths, options).call
     rescue Interrupt
       warn "\nInterrupted"
+      nil
     end
 
     def flat_content(content, options = {})
       items = FlattenYaml.items_from_content(content)
-      PrintItems.new(options[:search]).print(items)
+      PrintItems.new(options[:search], options[:search_value], case_sensitive: options[:case_sensitive]).print(items) || false
     end
   end
 end

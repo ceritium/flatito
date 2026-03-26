@@ -1,6 +1,6 @@
 # Flatito: Grep for YAML and JSON files
 
-A kind of grep for YAML and JSON files. It allows you to search for a key and get the value and the line number where it is located.
+A kind of grep for YAML and JSON files. It allows you to search by key or value and get the matching entries with their line numbers.
 
 ![Example](docs/screenshot.png)
 
@@ -30,14 +30,27 @@ It is also available as [nixpkgs](https://search.nixos.org/packages?channel=unst
 ```sh
 Usage:    flatito PATH [options]
 Example:  flatito . -k "search string" -e "json,yaml"
+Example:  flatito . -c "search value"
 Example:  cat file.yaml | flatito -k "search string"
 
     -h, --help                       Prints this help
     -V, --version                    Show version
-    -k, --search-key=SEARCH          Search string
+    -k, --search-key=SEARCH          Search by key
+    -c, --search-value=SEARCH        Search by value
+    -s, --case-sensitive             Case sensitive search
         --no-color                   Disable color output
     -e, --extensions=EXTENSIONS      File extensions to search, separated by comma, default: (json,yaml,yaml)
         --no-skipping                Do not skip hidden files
+        --no-gitignore               Do not respect .gitignore
+```
+
+Searches are case-insensitive by default. Use `-s` to force exact case matching.
+
+Both `-k` and `-c` support regular expressions and can be combined:
+
+```sh
+# Find keys matching "database" with values containing "production"
+flatito . -k "database" -c "production"
 ```
 
 ## Development
