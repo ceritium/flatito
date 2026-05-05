@@ -6,6 +6,7 @@ require "optparse"
 
 # If no arguments are given, print help
 stdin = $stdin.read unless $stdin.tty?
+stdin = nil if stdin && stdin.empty?
 ARGV << "-h" if ARGV.empty? && !stdin
 
 options = {}
@@ -15,6 +16,7 @@ OptionParser.new do |opts|
     Example:  flatito . -k "search string" -e "json,yaml"
     Example:  flatito . -c "search value"
     Example:  cat file.yaml | flatito -k "search string"
+    Example:  git diff | flatito -k "search string"
   HEREDOC
 
   opts.on("-h", "--help", "Prints this help") do
@@ -54,12 +56,33 @@ OptionParser.new do |opts|
   opts.on("--no-gitignore", "Do not respect .gitignore") do
     options[:gitignore] = false
   end
+
+  opts.on("--side=SIDE", %w[before after both],
+          "When input is a diff, which side to report (before, after, both). Default: both") do |s|
+    options[:side] = s.to_sym
+  end
 end.parse!
 
 Flatito::Config.prepare_with_options(options)
 
-matched = if stdin
+def diff_from_argv(argv)
+  return nil unless argv.size == 1
+
+  path = argv.first
+  return nil unless File.file?(path)
+
+  content = File.read(path)
+  Flatito::DiffParser.diff?(content) ? content : nil
+end
+
+argv_diff = diff_from_argv(ARGV)
+
+matched = if stdin && Flatito::DiffParser.diff?(stdin)
+            Flatito.from_diff(stdin, options)
+          elsif stdin
             Flatito.flat_content(stdin, options)
+          elsif argv_diff
+            Flatito.from_diff(argv_diff, options)
           else
             Flatito.search(ARGV, options)
           end

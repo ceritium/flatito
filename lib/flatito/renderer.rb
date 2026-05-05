@@ -55,7 +55,16 @@ module Flatito
                 ""
               end
 
-      stdout.puts "#{line_number} #{matched_string(item.key)} #{value}"
+      marker = marker_prefix(item)
+      stdout.puts "#{marker}#{line_number} #{matched_string(item.key)} #{value}"
+    end
+
+    def marker_prefix(item)
+      case item.marker
+      when :add then colorize("+ ", :green)
+      when :del then colorize("- ", :red)
+      else ""
+      end
     end
 
     private

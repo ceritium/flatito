@@ -32,6 +32,7 @@ Usage:    flatito PATH [options]
 Example:  flatito . -k "search string" -e "json,yaml"
 Example:  flatito . -c "search value"
 Example:  cat file.yaml | flatito -k "search string"
+Example:  git diff | flatito -k "search string"
 
     -h, --help                       Prints this help
     -V, --version                    Show version
@@ -42,6 +43,7 @@ Example:  cat file.yaml | flatito -k "search string"
     -e, --extensions=EXTENSIONS      File extensions to search, separated by comma, default: (json,yaml,yaml)
         --no-skipping                Do not skip hidden files
         --no-gitignore               Do not respect .gitignore
+        --side=SIDE                  When input is a diff: before, after, or both (default: both)
 ```
 
 Searches are case-insensitive by default. Use `-s` to force exact case matching.
@@ -52,6 +54,31 @@ Both `-k` and `-c` support regular expressions and can be combined:
 # Find keys matching "database" with values containing "production"
 flatito . -k "database" -c "production"
 ```
+
+### Searching inside a `git diff`
+
+When the input piped through stdin is a unified diff (e.g. the output of `git diff`),
+flatito reports only the YAML/JSON entries whose lines were added (`+`) or
+removed (`-`) by the diff. Each result is prefixed accordingly.
+
+```sh
+# Show every changed key in the working tree
+git diff | flatito
+
+# Inspect a specific commit, branch range, or staged changes
+git diff HEAD~1 | flatito -k "version"
+git diff main..feature | flatito -c "production"
+git diff --cached | flatito
+
+# Pick a side: only what was added, only what was removed, or both
+git diff | flatito --side=after
+git diff | flatito --side=before
+```
+
+When the diff includes git index hashes (the default for `git diff`), flatito
+reads the original content via `git cat-file` so nested keys retain their
+parent context. If those blobs are unavailable, it falls back to reconstructing
+the changed regions from the diff hunks alone.
 
 ## Development
 

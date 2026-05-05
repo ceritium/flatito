@@ -1,0 +1,13 @@
+diff --git a/test/fixtures/diff_sample.yml b/test/fixtures/diff_sample.yml
+index 1111111..2222222 100644
+--- a/test/fixtures/diff_sample.yml
++++ b/test/fixtures/diff_sample.yml
+@@ -1,5 +1,7 @@
+ nested1:
+-  one: One
++  one: OneModified
+   nested2:
+     two: Two
++    extra: Extra
+ three: Three
++four: Four

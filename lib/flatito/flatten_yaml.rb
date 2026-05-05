@@ -2,7 +2,7 @@
 
 module Flatito
   class FlattenYaml
-    Item = Struct.new(:key, :value, :line, keyword_init: true)
+    Item = Struct.new(:key, :value, :line, :marker, keyword_init: true)
     class << self
       def items_from_path(pathname)
         content = File.read(pathname)
